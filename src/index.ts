@@ -17,6 +17,9 @@ type Task = {
 let tasks: Task[] = [];
 let nextId = 1;
 
+app.get('/', (req: Request, res: Response) => {
+  res.json("Welcome to Mini Tracker Rest API");
+});
 
 app.get('/tasks', (req: Request, res: Response) => {
   res.json(tasks);
